@@ -1,0 +1,24 @@
+{
+  "name": "emoji-with-gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Grapefruitgreentealoe/emoji-with-gulp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Grapefruitgreentealoe/emoji-with-gulp/issues"
+  },
+  "homepage": "https://github.com/Grapefruitgreentealoe/emoji-with-gulp#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-util": "^3.0.8"
+  }
+}

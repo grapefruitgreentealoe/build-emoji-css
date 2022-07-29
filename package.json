@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "Gulpfile.js",
+  "watches": {
+    "sass": "sass/**"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass sass/emojis/_all.scss -o build/css/index.css",
+    "dev": "rerun-script"
   },
   "repository": {
     "type": "git",
@@ -20,5 +25,13 @@
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-util": "^3.0.8"
+  },
+  "devDependencies": {
+    "axios": "^0.27.2",
+    "mustache": "^4.2.0",
+    "node-sass": "^7.0.1",
+    "rerun-script": "^0.6.0",
+    "sass-loader": "^13.0.2",
+    "webpack": "^5.74.0"
   }
 }

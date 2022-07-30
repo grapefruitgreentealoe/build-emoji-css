@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass sass/emojis/_all.scss -o build/css/index.css",
-    "dev": "rerun-script"
+    "dev": "rerun-script",
+    "build": "node src/index.js"
   },
   "repository": {
     "type": "git",

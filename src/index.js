@@ -2,11 +2,12 @@ const emoji = require("./generate").emoji;
 const Mustache = require("mustache");
 const fs = require("fs");
 const mkdirp = require("mkdirp");
+const path = require('path');
 
 async function write(emojis) {
   //   console.log(emojis);
-  let filename = __dirname + "/sass/emojis/_all.scss";
-  let dirname = __dirname + "/sass/emojis";
+  let filename = path.join(__dirname, '..', "/sass/emojis/_all.scss");
+  let dirname = path.join(__dirname, '..', "/sass/emojis");
   if (!fs.existsSync(dirname)) await mkdirp(dirname);
   let items = Object.keys(emojis);
   save_template(
@@ -19,10 +20,10 @@ async function write(emojis) {
   );
 
   items.forEach(async (element) => {
-    dirname = __dirname + "/sass/emojis/" + element;
+    dirname = path.join(__dirname, '..', "/sass/emojis/", element);
     if (!fs.existsSync(dirname)) await mkdirp(dirname);
     emojis[element].forEach(({ type, unicode, id }) => {
-      filename = __dirname + "/sass/emojis/" + type + "/_all.scss";
+      filename = path.join(__dirname, '..',"/sass/emojis/",type,"/_all.scss");
       save_template(
         filename,
         `{{#items}}.emoji-{{name}}:before { content: '\{{code}}'; }{{/items}}

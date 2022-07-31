@@ -1,5 +1,5 @@
 
-## project for build css file for emoji icon 
+## this project is for building css file for emoji icon 
 
 ```
 // install packages

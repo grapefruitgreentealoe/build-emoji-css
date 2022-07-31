@@ -1,5 +1,10 @@
 # emoji-with-gulp
 
+todos
+- [ ] 
+- [ ] 
+
+
 ```
 // install packages
 yarn

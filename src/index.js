@@ -11,8 +11,9 @@ async function write(emojis) {
   let items = Object.keys(emojis);
   save_template(
     filename,
-    `{{#items}}@import "{{.}}/all";
-  {{/items}}`,
+    fs
+      .readFileSync(path.join(__dirname, "..", "template/_imports.mustache"))
+      .toString(),
     {
       items,
     }
@@ -34,8 +35,9 @@ async function write(emojis) {
       let fixedId = id.split("").map((x) => x.replace(meta_regex, `\\${x}`));
       save_template(
         filename,
-        `{{#items}}.emoji-{{name}}:before { content: '\{{code}}'; }{{/items}}
-        `,
+        fs
+          .readFileSync(path.join(__dirname, "..", "template/_emojis.mustache"))
+          .toString(),
         { items: { name: fixedId.join(""), code: unicode } }
       );
     });

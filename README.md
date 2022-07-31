@@ -1,9 +1,5 @@
 # emoji-with-gulp
-
-todos
-- [ ] 
-- [ ] 
-
+project for build css file for emoji icon 
 
 ```
 // install packages

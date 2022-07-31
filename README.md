@@ -1,4 +1,5 @@
-# emoji-with-gulp
+
+## this project is for building css file for emoji icon 
 
 ```
 // install packages
@@ -10,14 +11,15 @@ yarn build
 
 ````
 //file tree
-
+├── index.html //show example code about how to use built emoji css file
+├── sass
 ├── package.json
 ├── build
 │   └──css
 │       └── index.css // built css from scss
 ├── sass
 │   └── emojis
-│       ├── _all.scss
+│       ├── _all.scss // all of emojis
 │       ├── activity
 │       │   └── _all.scss
 │       ├── flags

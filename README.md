@@ -19,7 +19,7 @@ yarn build
 │       └── index.css // built css from scss
 ├── sass
 │   └── emojis
-│       ├── _all.scss
+│       ├── _all.scss // all of emojis
 │       ├── activity
 │       │   └── _all.scss
 │       ├── flags

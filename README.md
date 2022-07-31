@@ -11,8 +11,11 @@ yarn build
 ````
 //file tree
 
-├── package.json 
-├── sass 
+├── package.json
+├── build
+│   └──css
+│       └── index.css // built css from scss
+├── sass
 │   └── emojis
 │       ├── _all.scss
 │       ├── activity
@@ -40,3 +43,4 @@ yarn build
 ├── webpack.config.js
 └── yarn.lock
 ```
+````

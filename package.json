@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass sass/emojis/_all.scss build/css/index.css",
-    "build": "rm -rf build && rm -rf sass && node src/index.js && sass sass/emojis/_all.scss build/css/index.css"
+    "build": "rm -rf build && rm -rf sass && node src/index.js && sass --no-source-map sass/emojis/_all.scss build/css/index.css"
   },
   "repository": {
     "type": "git",

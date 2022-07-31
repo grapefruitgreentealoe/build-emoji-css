@@ -12,7 +12,7 @@ const fetchTodo = async () => {
 };
 
 // For the folowing code to work, it must be placed inside a async  function as well
-async function makeEmojiScss() {
+async function makeEmojiData() {
   let {
     data: { categories, emojis },
   } = await fetchTodo();
@@ -39,5 +39,5 @@ async function makeEmojiScss() {
 }
 
 module.exports = {
-  emoji: makeEmojiScss,
+  emoji: makeEmojiData,
 };

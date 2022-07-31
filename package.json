@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass sass/emojis/_all.scss build/css/index.css",
     "dev": "rerun-script",
-    "build": "node src/index.js && sass sass/emojis/_all.scss build/css/index.css"
+    "build": "rm -rf build && rm -rf sass && node src/index.js && sass sass/emojis/_all.scss build/css/index.css"
   },
   "repository": {
     "type": "git",

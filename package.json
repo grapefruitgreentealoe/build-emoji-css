@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass sass/emojis/_all.scss build/css/index.css",
-    "build": "rm -rf build && rm -rf sass && node src/index.js && sass --no-source-map sass/emojis/_all.scss build/css/index.css"
+    "build": "rm -rf build && rm -rf sass && node src/index.js && sass --no-source-map sass/emojis/_all.scss build/css/index.css",
+    "browserify": "browserify index.js > bundle.js",
+    "http" : "http-server"
   },
   "repository": {
     "type": "git",
@@ -20,11 +22,13 @@
   },
   "homepage": "https://github.com/Grapefruitgreentealoe/emoji-with-gulp#readme",
   "dependencies": {
+    "browserify": "^17.0.0",
     "gulp": "^4.0.2",
     "gulp-util": "^3.0.8"
   },
   "devDependencies": {
     "axios": "^0.27.2",
+    "http-server": "^14.1.1",
     "mustache": "^4.2.0",
     "sass": "^1.54.0",
     "sass-loader": "^13.0.2",

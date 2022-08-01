@@ -22,17 +22,21 @@ async function makeEmojiData() {
   });
 
   Object.keys(emojis).map(function (key) {
-    let type;
-    categories.map(({ id, emojis }) => {
-      if (emojis.includes(key) && typeof id != undefined) {
-        type = id;
-      }
-    });
-    sortedData[type].push({
-      type,
-      unicode: `\\${emojis[key].skins[0].unified}`,
-      id: emojis[key].id,
-    });
+    //모든 이모지들의 집합으로 보임.
+    if (emojis[key].version <= 13) {
+      categories.map(({ id, emojis, version }) => {
+        if (emojis.includes(key) && typeof id != undefined) {
+          type = id;
+        } // 이모지가 key가 있으면 type을 id로 둔다..
+      });
+      let fixedUnicode = emojis[key].skins[0].unified.replaceAll("-", "\\");
+
+      sortedData[type].push({
+        type,
+        unicode: fixedUnicode,
+        id: emojis[key].id,
+      });
+    }
   });
 
   return sortedData;

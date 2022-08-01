@@ -49,7 +49,7 @@ async function write(emojis) {
       );
     });
   });
-  filename = path.join(__dirname, "..", "build/emoji_list.js");
+  filename = path.join(__dirname, "..", "build/emoji_list.json");
   dirname = path.join(__dirname, "..", "build");
   fs.mkdirSync(dirname, { recursive: true }, (err) => {});
   fs.writeFileSync(

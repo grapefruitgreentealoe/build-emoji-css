@@ -19,8 +19,6 @@ async function test() {
         '"></i></a></div>';
     });
   });
-
-  return emoji_list;
 }
 
 test();

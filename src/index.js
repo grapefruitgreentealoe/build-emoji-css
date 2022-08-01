@@ -34,7 +34,7 @@ async function write(emojis) {
       "/_all.scss"
     );
     emojis[element].forEach(({ unicode, id }) => {
-      let meta_regex = /[\*|\?|\+|\^|\.|\$|\[\]|\||\\|\{\}|\(\)]/;
+      let meta_regex = /[\*\?\+\^\.\$\[\]\|\\\{\}\(\)]/;
       let fixedId = id
         .split("")
         .map((x) => x.replace(meta_regex, `\\${x}`))

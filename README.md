@@ -17,6 +17,7 @@ yarn build
 ├── build
 │   └──css
 │       └── index.css // built css from scss
+│       └── emoji_list.json // list of emoji classes
 ├── sass
 │   └── emojis
 │       ├── _all.scss // all of emojis

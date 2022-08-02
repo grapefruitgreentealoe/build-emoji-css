@@ -22,8 +22,9 @@ async function makeEmojiData() {
   });
 
   Object.keys(emojis).map(function (key) {
+    let flag = 0;
     //모든 이모지들의 집합으로 보임.
-    if (emojis[key].version <= 13) {
+    if (emojis[key].version <= 13 && flag < 13) {
       categories.map(({ id, emojis, version }) => {
         if (emojis.includes(key) && typeof id != undefined) {
           type = id;
@@ -36,6 +37,7 @@ async function makeEmojiData() {
         unicode: fixedUnicode,
         id: emojis[key].id,
       });
+      flat++;
     }
   });
 
